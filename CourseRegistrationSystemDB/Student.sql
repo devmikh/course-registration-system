@@ -1,0 +1,5 @@
+﻿CREATE TABLE [dbo].[Student]
+(
+	[StudentId] INT NOT NULL PRIMARY KEY IDENTITY,
+	[StudentName] NVARCHAR(100) NOT NULL
+)

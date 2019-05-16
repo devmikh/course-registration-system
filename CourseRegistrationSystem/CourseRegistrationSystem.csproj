@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D5A2D82-3813-411D-893B-2169A5A46F7B}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CourseRegistrationSystem</RootNamespace>
+    <AssemblyName>CourseRegistrationSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBSeed.cs" />
+    <Compile Include="EFClasses\Course.cs" />
+    <Compile Include="EFClasses\CourseRegistrationEntities.cs" />
+    <Compile Include="EFClasses\Department.cs" />
+    <Compile Include="EFClasses\Instructor.cs" />
+    <Compile Include="EFClasses\Student.cs" />
+    <Compile Include="Forms\FormAddNewCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddNewCourse.Designer.cs">
+      <DependentUpon>FormAddNewCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddNewDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddNewDepartment.Designer.cs">
+      <DependentUpon>FormAddNewDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddNewInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddNewInstructor.Designer.cs">
+      <DependentUpon>FormAddNewInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAddNewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAddNewStudent.Designer.cs">
+      <DependentUpon>FormAddNewStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAdminShowCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAdminShowCourse.Designer.cs">
+      <DependentUpon>FormAdminShowCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormStudentShowCourse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormStudentShowCourse.Designer.cs">
+      <DependentUpon>FormStudentShowCourse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAdminShowDepartment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAdminShowDepartment.Designer.cs">
+      <DependentUpon>FormAdminShowDepartment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAdminShowInstructor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAdminShowInstructor.Designer.cs">
+      <DependentUpon>FormAdminShowInstructor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormAdminShowStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormAdminShowStudent.Designer.cs">
+      <DependentUpon>FormAdminShowStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainProgram.cs" />
+    <Compile Include="Migrations\201904021750547_InitialCreate.cs" />
+    <Compile Include="Migrations\201904021750547_InitialCreate.Designer.cs">
+      <DependentUpon>201904021750547_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201904080136279_InitialMigrations.cs" />
+    <Compile Include="Migrations\201904080136279_InitialMigrations.Designer.cs">
+      <DependentUpon>201904080136279_InitialMigrations.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\FormAddNewCourse.resx">
+      <DependentUpon>FormAddNewCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddNewDepartment.resx">
+      <DependentUpon>FormAddNewDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddNewInstructor.resx">
+      <DependentUpon>FormAddNewInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAddNewStudent.resx">
+      <DependentUpon>FormAddNewStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAdminShowCourse.resx">
+      <DependentUpon>FormAdminShowCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormStudentShowCourse.resx">
+      <DependentUpon>FormStudentShowCourse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAdminShowDepartment.resx">
+      <DependentUpon>FormAdminShowDepartment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAdminShowInstructor.resx">
+      <DependentUpon>FormAdminShowInstructor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\FormAdminShowStudent.resx">
+      <DependentUpon>FormAdminShowStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904021750547_InitialCreate.resx">
+      <DependentUpon>201904021750547_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201904080136279_InitialMigrations.resx">
+      <DependentUpon>201904080136279_InitialMigrations.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
